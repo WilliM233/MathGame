@@ -1,0 +1,15 @@
+D:\Projects\Portfolio\MathGame\MathGame\bin\Debug\net6.0\MathGame.exe
+D:\Projects\Portfolio\MathGame\MathGame\bin\Debug\net6.0\MathGame.deps.json
+D:\Projects\Portfolio\MathGame\MathGame\bin\Debug\net6.0\MathGame.runtimeconfig.json
+D:\Projects\Portfolio\MathGame\MathGame\bin\Debug\net6.0\MathGame.dll
+D:\Projects\Portfolio\MathGame\MathGame\bin\Debug\net6.0\MathGame.pdb
+D:\Projects\Portfolio\MathGame\MathGame\obj\Debug\net6.0\MathGame.csproj.AssemblyReference.cache
+D:\Projects\Portfolio\MathGame\MathGame\obj\Debug\net6.0\MathGame.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Portfolio\MathGame\MathGame\obj\Debug\net6.0\MathGame.AssemblyInfoInputs.cache
+D:\Projects\Portfolio\MathGame\MathGame\obj\Debug\net6.0\MathGame.AssemblyInfo.cs
+D:\Projects\Portfolio\MathGame\MathGame\obj\Debug\net6.0\MathGame.csproj.CoreCompileInputs.cache
+D:\Projects\Portfolio\MathGame\MathGame\obj\Debug\net6.0\MathGame.dll
+D:\Projects\Portfolio\MathGame\MathGame\obj\Debug\net6.0\refint\MathGame.dll
+D:\Projects\Portfolio\MathGame\MathGame\obj\Debug\net6.0\MathGame.pdb
+D:\Projects\Portfolio\MathGame\MathGame\obj\Debug\net6.0\MathGame.genruntimeconfig.cache
+D:\Projects\Portfolio\MathGame\MathGame\obj\Debug\net6.0\ref\MathGame.dll
