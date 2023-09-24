@@ -24,7 +24,10 @@ namespace MathGame
 
                 // display two numbers and collect input
                 Console.WriteLine($"{firstNumber} + {secondNumber}");
+
                 var result = Console.ReadLine();
+
+                result = Helpers.ValidateResult(result);
 
                 // check result == sum of the numbers
                 if (int.Parse(result) == firstNumber + secondNumber)
@@ -70,6 +73,8 @@ namespace MathGame
                 Console.WriteLine($"{firstNumber} - {secondNumber}");
                 var result = Console.ReadLine();
 
+                result = Helpers.ValidateResult(result);
+
                 // check result == sum of the numbers
                 if (int.Parse(result) == firstNumber - secondNumber)
                 {
@@ -114,6 +119,8 @@ namespace MathGame
                 Console.WriteLine($"{firstNumber} * {secondNumber}");
                 var result = Console.ReadLine();
 
+                result = Helpers.ValidateResult(result);
+
                 // check result == sum of the numbers
                 if (int.Parse(result) == firstNumber * secondNumber)
                 {
@@ -151,6 +158,8 @@ namespace MathGame
 
                 Console.WriteLine($"{firstNumber} / {secondNumber}");
                 var result = Console.ReadLine();
+
+                result = Helpers.ValidateResult(result);
 
                 // check result == sum of the numbers
                 if (int.Parse(result) == firstNumber / secondNumber)

@@ -9,6 +9,8 @@
             Console.WriteLine("------------------------------------------------------------------------------------");
 
             Console.WriteLine($"Hello {name}. It is {date}.  Welcome to the Math Game!");
+            Console.WriteLine("Press any key to show menu");
+            Console.ReadLine();
             Console.WriteLine("\n");
 
             var isGameOn = true;
@@ -22,7 +24,7 @@ A - Addition
 S - Subtraction
 M - Multiplication
 D - Division
-Q - Quite the program");
+Q - Quit the program");
 
                 Console.WriteLine("------------------------------------------------------------------------------------");
 
