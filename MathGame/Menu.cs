@@ -32,7 +32,7 @@ Q - Quite the program");
                 switch (gameSelected.Trim().ToLower())
                 {
                     case "v":
-                        Helpers.GetGames();
+                        Helpers.PrintGames();
                         break;
                     case "a":
                         gameEngine.AdditionGame("Addition game selected");
