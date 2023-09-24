@@ -1,6 +1,6 @@
-﻿using static System.Formats.Asn1.AsnWriter;
+﻿var date = DateTime.UtcNow;
 
-var date = DateTime.UtcNow;
+var games = new List<string>();
 
 string? name = GetName();
 
@@ -25,12 +25,13 @@ void Menu(string? name, DateTime date)
     do
     {
         Console.Clear();
-        Console.WriteLine($@"What game would you like to play?
-        A - Addition
-        S - Subtraction
-        M - Multiplication
-        D - Division
-        Q - Quite the program");
+        Console.WriteLine(@$"What game would you like to play?
+V - View Previous Games
+A - Addition
+S - Subtraction
+M - Multiplication
+D - Division
+Q - Quite the program");
 
         Console.WriteLine("------------------------------------------------------------------------------------");
 
@@ -39,6 +40,9 @@ void Menu(string? name, DateTime date)
 
         switch (gameSelected.Trim().ToLower())
         {
+            case "v":
+                GetGames();
+                break;
             case "a":
                 AdditionGame("Addition game selected");
                 break;
@@ -61,6 +65,20 @@ void Menu(string? name, DateTime date)
                 break;
         }
     } while (isGameOn);
+}
+
+void GetGames()
+{
+    Console.Clear();
+    Console.WriteLine("Games History");
+    Console.WriteLine("------------------------------------------------------------------------------------");
+    foreach (var game in games)
+    {
+        Console.WriteLine(game);
+    }
+    Console.WriteLine("------------------------------------------------------------------------------------");
+    Console.WriteLine("Press any key to return to Main Menu");
+    Console.ReadLine();
 }
 
 void AdditionGame(string message)
@@ -103,6 +121,8 @@ void AdditionGame(string message)
             Console.ReadLine();
         }
     }
+
+    AddToHistory(score, "Addition");
 }
 
 void SubtractionGame(string message)
@@ -145,6 +165,8 @@ void SubtractionGame(string message)
             Console.ReadLine();
         }
     }
+
+    AddToHistory(score, "Subtraction");
 }
 
 void MultiplicationGame(string message)
@@ -187,6 +209,8 @@ void MultiplicationGame(string message)
             Console.ReadLine();
         }
     }
+
+    AddToHistory(score, "Multiplication");
 }
 
 void DivisionGame(string message)
@@ -223,6 +247,13 @@ void DivisionGame(string message)
             Console.ReadLine();
         }
     }
+
+    AddToHistory(score, "Division");
+}
+
+void AddToHistory(int gameScore, string gameType)
+{
+    games.Add($"{DateTime.Now} - {gameType}: {gameScore} pts");
 }
 
 int[] GetDivisionNumbers()
