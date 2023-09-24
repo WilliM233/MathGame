@@ -1,0 +1,5 @@
+D:\Projects\Portfolio\MathGame\MathGame\bin\Release\net6.0\publish\MathGame.exe
+D:\Projects\Portfolio\MathGame\MathGame\bin\Release\net6.0\publish\MathGame.dll
+D:\Projects\Portfolio\MathGame\MathGame\bin\Release\net6.0\publish\MathGame.deps.json
+D:\Projects\Portfolio\MathGame\MathGame\bin\Release\net6.0\publish\MathGame.runtimeconfig.json
+D:\Projects\Portfolio\MathGame\MathGame\bin\Release\net6.0\publish\MathGame.pdb
