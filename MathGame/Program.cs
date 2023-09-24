@@ -1,45 +1,74 @@
-﻿Console.WriteLine("Please type your name");
+﻿var date = DateTime.UtcNow;
 
-var name = Console.ReadLine();
-var date = DateTime.UtcNow;
+string? name = GetName();
 
-Console.WriteLine("------------------------------------------------------------------------------------");
+Menu(name, date);
 
-Console.WriteLine($"Hello {name.ToUpper()}. It is {date.DayOfWeek}.  Welcome to the Math Game!");
-Console.WriteLine($@"What game would you like to play?
+string GetName()
+{
+    Console.WriteLine("Please type your name");
+    var name = Console.ReadLine();
+    return name;
+}
+
+void Menu(string? name, DateTime date)
+{
+    Console.WriteLine("------------------------------------------------------------------------------------");
+
+    Console.WriteLine($"Hello {name}. It is {date}.  Welcome to the Math Game!");
+    Console.WriteLine($@"What game would you like to play?
 A - Addition
 S - Subtraction
 M - Multiplication
 D - Division
 Q - Quite the program");
 
-Console.WriteLine("------------------------------------------------------------------------------------");
+    Console.WriteLine("------------------------------------------------------------------------------------");
 
-// Process menu selection
-var gameSelected = Console.ReadLine();
+    // Process menu selection
+    var gameSelected = Console.ReadLine();
 
-if (gameSelected.Trim().ToLower() == "a")
-{
-    Console.WriteLine("Addition game selected");
+    switch (gameSelected.Trim().ToLower())
+    {
+        case "a":
+            AdditionGame("Addition game selected");
+            break;
+        case "s":
+            SubtractionGame("Subtraction game selected");
+            break;
+        case "m":
+            MultiplicationGame("Multiplication game selected");
+            break;
+        case "d":
+            DivisionGame("Division game selected");
+            break;
+        case "q":
+            Console.WriteLine("Goodbye");
+            Environment.Exit(1);
+            break;
+        default:
+            Console.WriteLine("Invalid Input");
+            Environment.Exit(1);
+            break;
+    }
 }
-else if (gameSelected.Trim().ToLower() == "s")
+
+void AdditionGame(string message)
 {
-    Console.WriteLine("Subtraction game selected");
+    Console.WriteLine(message);
 }
-else if (gameSelected.Trim().ToLower() == "m")
+
+void SubtractionGame(string message)
 {
-    Console.WriteLine("Multiplication game selected");
+    Console.WriteLine(message);
 }
-else if (gameSelected.Trim().ToLower() == "d")
+
+void MultiplicationGame(string message)
 {
-    Console.WriteLine("Division game selected");
+    Console.WriteLine(message);
 }
-else if (gameSelected.Trim().ToLower() == "q")
+
+void DivisionGame(string message)
 {
-    Console.WriteLine("Goodbye");
-    Environment.Exit(1);
-}
-else
-{
-    Console.WriteLine("Invalid Input");
+    Console.WriteLine(message);
 }
