@@ -18,41 +18,49 @@ void Menu(string? name, DateTime date)
     Console.WriteLine("------------------------------------------------------------------------------------");
 
     Console.WriteLine($"Hello {name}. It is {date}.  Welcome to the Math Game!");
-    Console.WriteLine($@"What game would you like to play?
-A - Addition
-S - Subtraction
-M - Multiplication
-D - Division
-Q - Quite the program");
+    Console.WriteLine("\n");
 
-    Console.WriteLine("------------------------------------------------------------------------------------");
+    var isGameOn = true;
 
-    // Process menu selection
-    var gameSelected = Console.ReadLine();
-
-    switch (gameSelected.Trim().ToLower())
+    do
     {
-        case "a":
-            AdditionGame("Addition game selected");
-            break;
-        case "s":
-            SubtractionGame("Subtraction game selected");
-            break;
-        case "m":
-            MultiplicationGame("Multiplication game selected");
-            break;
-        case "d":
-            DivisionGame("Division game selected");
-            break;
-        case "q":
-            Console.WriteLine("Goodbye");
-            Environment.Exit(1);
-            break;
-        default:
-            Console.WriteLine("Invalid Input");
-            Environment.Exit(1);
-            break;
-    }
+        Console.Clear();
+        Console.WriteLine($@"What game would you like to play?
+        A - Addition
+        S - Subtraction
+        M - Multiplication
+        D - Division
+        Q - Quite the program");
+
+        Console.WriteLine("------------------------------------------------------------------------------------");
+
+        // Process menu selection
+        var gameSelected = Console.ReadLine();
+
+        switch (gameSelected.Trim().ToLower())
+        {
+            case "a":
+                AdditionGame("Addition game selected");
+                break;
+            case "s":
+                SubtractionGame("Subtraction game selected");
+                break;
+            case "m":
+                MultiplicationGame("Multiplication game selected");
+                break;
+            case "d":
+                DivisionGame("Division game selected");
+                break;
+            case "q":
+                Console.WriteLine("Goodbye");
+                isGameOn = false;
+                Environment.Exit(1);
+                break;
+            default:
+                Console.WriteLine("Invalid Input");
+                break;
+        }
+    } while (isGameOn);
 }
 
 void AdditionGame(string message)
@@ -89,7 +97,11 @@ void AdditionGame(string message)
             Console.ReadLine();
         }
 
-        if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
+        if (i == 4)
+        {
+            Console.WriteLine($"Game over. Your final score is {score}. Press any key to go back to the main munu.");
+            Console.ReadLine();
+        }
     }
 }
 
@@ -127,7 +139,11 @@ void SubtractionGame(string message)
             Console.ReadLine();
         }
 
-        if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
+        if (i == 4)
+        {
+            Console.WriteLine($"Game over. Your final score is {score}. Press any key to go back to the main munu.");
+            Console.ReadLine();
+        }
     }
 }
 
@@ -165,7 +181,11 @@ void MultiplicationGame(string message)
             Console.ReadLine();
         }
 
-        if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
+        if (i == 4)
+        {
+            Console.WriteLine($"Game over. Your final score is {score}. Press any key to go back to the main munu.");
+            Console.ReadLine();
+        }
     }
 }
 
@@ -197,7 +217,11 @@ void DivisionGame(string message)
             Console.ReadLine();
         }
 
-        if (i == 4) Console.WriteLine($"Game over. Your final score is {score}");
+        if (i == 4)
+        {
+            Console.WriteLine($"Game over. Your final score is {score}. Press any key to go back to the main munu.");
+            Console.ReadLine();
+        }
     }
 }
 
